@@ -1,6 +1,7 @@
 package com.abing.product.service;
 
 import com.abing.product.DTO.CartDTO;
+import com.abing.product.dataobject.DecreaseStockInput;
 import com.abing.product.dataobject.ProductInfo;
 import com.abing.product.dataobject.ProductInfoOutput;
 
@@ -25,5 +26,5 @@ public interface ProductService {
      * 扣库存
      * @param cartDTOList
      */
-   void decreaseStock(List<CartDTO> cartDTOList);
+   void decreaseStock(List<DecreaseStockInput> cartDTOList);
 }

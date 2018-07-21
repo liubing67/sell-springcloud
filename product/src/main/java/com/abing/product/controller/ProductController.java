@@ -4,6 +4,7 @@ import com.abing.product.DTO.CartDTO;
 import com.abing.product.VO.ProductInfoVO;
 import com.abing.product.VO.ProductVO;
 import com.abing.product.VO.ResultVO;
+import com.abing.product.dataobject.DecreaseStockInput;
 import com.abing.product.dataobject.ProductCategory;
 import com.abing.product.dataobject.ProductInfo;
 import com.abing.product.dataobject.ProductInfoOutput;
@@ -77,7 +78,7 @@ public class ProductController {
     }
 
     @PostMapping("/decreaseStock")
-    public void decreaseStock(@RequestBody List<CartDTO> cartDTOList){
+    public void decreaseStock(@RequestBody List<DecreaseStockInput> cartDTOList){
         productService.decreaseStock(cartDTOList);
     }
 }

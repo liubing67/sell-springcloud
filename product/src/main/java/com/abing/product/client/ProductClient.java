@@ -1,7 +1,9 @@
 package com.abing.product.client;
 
 import com.abing.product.DTO.CartDTO;
+import com.abing.product.dataobject.DecreaseStockInput;
 import com.abing.product.dataobject.ProductInfo;
+import com.abing.product.dataobject.ProductInfoOutput;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,8 +15,8 @@ public interface ProductClient {
 
 
     @PostMapping("/product/listForOrder")
-    List<ProductInfo> listForOrder(@RequestBody List<String> productIdList);
+    List<ProductInfoOutput> listForOrder(@RequestBody List<String> productIdList);
 
     @PostMapping("/product/decreaseStock")
-    void decreaseStock(@RequestBody List<CartDTO> cartDTOList);
+    void decreaseStock(@RequestBody List<DecreaseStockInput> cartDTOList);
 }
