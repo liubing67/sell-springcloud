@@ -1,8 +1,8 @@
 package com.abing.order.controller;
 
-import com.abing.order.config.ProductClient;
-import com.abing.order.dataobject.ProductInfo;
-import com.abing.order.dto.CartDTO;
+import com.abing.product.DTO.CartDTO;
+import com.abing.product.client.ProductClient;
+import com.abing.product.dataobject.ProductInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

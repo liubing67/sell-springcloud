@@ -1,9 +1,8 @@
-package com.abing.order.config;
+package com.abing.product.client;
 
-import com.abing.order.dataobject.ProductInfo;
-import com.abing.order.dto.CartDTO;
-import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
+import com.abing.product.DTO.CartDTO;
+import com.abing.product.dataobject.ProductInfo;
+import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
