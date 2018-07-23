@@ -2,7 +2,9 @@ package com.abing.order.controller;
 
 import com.abing.product.DTO.CartDTO;
 import com.abing.product.client.ProductClient;
+import com.abing.product.dataobject.DecreaseStockInput;
 import com.abing.product.dataobject.ProductInfo;
+import com.abing.product.dataobject.ProductInfoOutput;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -47,13 +49,13 @@ public class ClientController {
 
     @GetMapping("/getProductList")
     public String getProductList(){
-        List<ProductInfo> productInfoList=productClient.listForOrder(Arrays.asList("1"));
+        List<ProductInfoOutput> productInfoList=productClient.listForOrder(Arrays.asList("1"));
         return productInfoList.toString();
     }
 
     @GetMapping("/product/productDecreaseStock")
     public String productDecreaseStock(){
-        productClient.decreaseStock(Arrays.asList(new CartDTO("1",1)));
+        productClient.decreaseStock(Arrays.asList(new DecreaseStockInput("1",1)));
         return "ok";
     }
 }
