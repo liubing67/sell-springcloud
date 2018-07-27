@@ -1,6 +1,5 @@
 package com.abing.product.service.impl;
 
-import com.abing.product.DTO.CartDTO;
 import com.abing.product.dataobject.DecreaseStockInput;
 import com.abing.product.dataobject.ProductInfo;
 import com.abing.product.dataobject.ProductInfoOutput;
@@ -43,7 +42,7 @@ public class ProductServiceImpl implements ProductService {
     @Transactional
     public void decreaseStock(List<DecreaseStockInput> cartDTOList) {
         for (DecreaseStockInput cartDTO:cartDTOList){
-            Optional<ProductInfo> productInfoOptional=Optional.ofNullable(productInfoRepository.findOne(cartDTO.getProductId()));
+            Optional<ProductInfo> productInfoOptional=productInfoRepository.findById(cartDTO.getProductId());
            //判断商品是否存在
             if (!productInfoOptional.isPresent()){
                 throw new ProductException(ResultEnum.PRODUCT_NOT_EXIST);

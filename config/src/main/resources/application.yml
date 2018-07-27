@@ -8,7 +8,7 @@ spring:
           uri: https://gitee.com/liubing67/config-repo
           username: 727266839@qq.com
           password: L10106235b
-#          basedir: /Users/admin/code/myProjects/java/imooc/SpringCloud_Sell/config/basedir
+          basedir: D:\aliubing\liuwebtest\webproject\sell-springcloud\config\basedir
 eureka:
   client:
     service-url:

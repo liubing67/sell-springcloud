@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients(basePackages = "com.abing.product.client")
+//@EnableFeignClients(basePackages = "com.abing.product.client")
 public class OrderApplication {
 
     public static void main(String[] args) {
